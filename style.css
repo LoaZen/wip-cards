@@ -1,0 +1,95 @@
+body {
+  background-color: #1a1a1a;
+}
+#card-trigger li {
+  list-style-type: none;
+  width: 100px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+  cursor: pointer;
+  margin: 2px;
+}
+#card-trigger li:first-child { background-image: url('7-card.png'); }
+#card-trigger li:nth-child(2) { background-image: url('3-card.png'); }
+#card-trigger li:nth-child(3) { background-image: url('2-card.png'); }
+
+#card-trigger li a { visibility: hidden; }
+
+#cards-holder { clear: left; }
+
+.card {
+  width: 287px;
+  height: 400px;
+  float: left;
+  margin: 3px;
+  padding: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-transform: capitalize;
+  position: relative;
+}
+.card h3 {
+  margin: 20px 18% 0 25%;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.card p {
+  font-size: 19px;
+  color:#fff;
+  margin: 30px 18%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+a {
+  background-color:#000;
+  padding: 0.5em 1em;
+  border: 2px solid red;
+  color:red;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+a:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.card a {
+  position: absolute;
+  bottom: 64px;
+  left: 26%;
+}
+.card.n7 { background-image: url('backg_card7.png'); }
+.card.n3 { background-image: url('backg_card3.png'); }
+.card.n2 { background-image: url('backg_card2.png'); }
+
+
+/* media query */
+
+@media (max-width: 767px) {
+    #card-trigger {
+      background-image: url('menu.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 40px;
+      cursor: pointer;
+      margin-bottom: 120px;
+    }
+    .x-icon { background-image: url('x-red.png') !important; }
+    #card-trigger li {
+      background-image: none !important;
+      float: none;
+      height: 50px;
+      display: none;
+      margin-left: 20px;
+    }
+    #card-trigger li a { visibility: visible; }
+
+    #remover { display: none; }
+}
+
+@media (min-width: 768px) {
+    #card-trigger li { display: block !important; }
+    #remover { display: inline-block !important; }
+}
